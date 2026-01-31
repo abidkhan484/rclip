@@ -138,6 +138,14 @@ rclip -p kitty
   ```
 </details>
 
+### Can I use **rclip** to copy images matching a certain query?
+
+Yes, you can pipe **rclip**'s output to another tool to copy the images. For example, to copy top 3 images matching the "search query" to `/path/to/destination` on macOS, Linux, or WSL you can do:
+
+```sh
+rclip -f -t 3 "search query" | xargs -I {} cp {} /path/to/destination
+```
+
 ### How does **rclip** update the index?
 
 When you run **rclip** in a directory that has already been processed, it will
